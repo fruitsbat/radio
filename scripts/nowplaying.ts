@@ -20,6 +20,8 @@ type ApiNowPlayingCurrentSong = {
   duration: number;
   streamer: string;
   song: ApiSong;
+  elapsed: number;
+  remaining: number;
 };
 
 type ApiNowPlayingSongHistory = {
