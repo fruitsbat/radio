@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-4 items-center w-full">
+  <div class="flex gap-4 items-center w-full max-w-60">
     <SpeakerWaveIcon class="h-8 w-8" />
     <input
       type="range"
