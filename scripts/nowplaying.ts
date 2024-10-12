@@ -7,6 +7,33 @@ type ApiNowPlayingStationMount = {
   bitrate: number | undefined;
 };
 
+type ApiSong = {
+  artist: string;
+  title: string;
+  album: string;
+  art: string;
+  custom_fields: { buy: string };
+};
+
+type ApiNowPlayingCurrentSong = {
+  played_at: number;
+  duration: number;
+  streamer: string;
+  song: ApiSong;
+};
+
+type ApiNowPlayingSongHistory = {
+  played_at: number;
+  duration: number;
+  song: ApiSong;
+};
+
+type ApiNowPlayingStationQueue = {
+  played_at: number;
+  duration: number;
+  song: ApiSong;
+};
+
 type ApiNowPlayingStation = {
   mounts: Array<ApiNowPlayingStationMount>;
   hls_listeners: number;
@@ -14,13 +41,10 @@ type ApiNowPlayingStation = {
 
 type ApiNowPlaying = {
   station: ApiNowPlayingStation;
+  now_playing: ApiNowPlayingCurrentSong;
+  song_history: ApiNowPlayingSongHistory;
+  playing_next: ApiNowPlayingStationQueue;
 };
-
-type AzuraNPResponse = {
-  channel: string;
-  pub: { data: { np: ApiNowPlaying } };
-};
-
 
 export const useNowPlayingStore = defineStore("nowPlaying", () => {
   const socket = useWebSocket<string>(

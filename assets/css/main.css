@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/font/FiraSans-Book.woff2");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-weight: normal;
+  font-style: italic;
+  src: url("/font/FiraSans-BookItalic.woff2");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: bold;
+  src: url("/font/FiraSans-Bold.woff2");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-weight: bold;
+  font-style: italic;
+  src: url("/font/FiraSans-BoldItalic.woff2");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: lighter;
+  src: url("/font/FiraSans-Light.woff2");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-weight: lighter;
+  font-style: italic;
+  src: url("/font/FiraSans-LightItalic.woff2");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/font/FiraSans-Heavy.woff2");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-weight: 900;
+  font-style: italic;
+  src: url("/font/FiraSans-HeavyItalic.woff2");
+}

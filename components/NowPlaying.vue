@@ -1,5 +1,7 @@
 <template>
-  <div v-if="lastValidResponse">{{ lastValidResponse }}</div>
+  <div v-if="lastValidResponse" class="@container">
+    <CurrentTrack />
+  </div>
   <div v-else class="loading-ring"></div>
 </template>
 

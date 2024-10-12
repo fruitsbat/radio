@@ -9,10 +9,10 @@ export default {
     "./error.vue",
   ],
   theme: {
+    fontFamily: {
+      sans: ["Fira Sans"],
+    },
     extend: {},
   },
-  plugins: [
-    require("daisyui"),
-    require('@tailwindcss/container-queries'),
-  ],
+  plugins: [require("daisyui"), require("@tailwindcss/container-queries")],
 };
