@@ -7,5 +7,5 @@ export interface ArtistInfo extends ParsedContent {
 }
 
 export function getArtistLinkFromName(name: string): string {
-  return `/#${name.replaceAll(" ", "-")}`;
+  return `/#artist-${name.replaceAll(" ", "-")}`;
 }
