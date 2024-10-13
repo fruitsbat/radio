@@ -26,7 +26,6 @@ import { useNowPlayingStore } from "~/scripts/nowplaying";
 import { useAudioPlayerStore } from "~/scripts/audioPlayer";
 import { MusicalNoteIcon, UserIcon } from "@heroicons/vue/16/solid";
 const mediaControlsStore = useAudioPlayerStore();
-const mediaControls = computed(() => mediaControlsStore.mediaControls);
 const npStore = useNowPlayingStore();
 const np = computed(() => npStore.lastValidResponse);
 const loading = computed(() => npStore.lastValidResponse === undefined);

@@ -1,24 +1,25 @@
 <template>
-  <div class="flex flex-col @md:flex-row">
-    <img :src="currentTrack?.song.art" />
-    <div>
-      <div class="flex flex-row items-center gap-2">
-        <MusicalNoteIcon class="w-10" />
-        <span class="font-black text-4xl">{{ currentTrack?.song.album }}</span>
-      </div>
-      <div>
-        <NuxtLink :to="currentArtistInfo?.links[0].url">
-          {{ currentArtistInfo?.name }}
-        </NuxtLink>
-      </div>
+  <div
+    class="bg-gradient-to-tr from-neutral to-primary rounded-3xl indicator w-full"
+  >
+    <span
+      class="indicator-item right-12 badge badge-primary drop-shadow-primary flex flex-col gap-1 items-center @md:flex-row"
+      ><PlayIcon class="w-3 h-3" /> now playing</span
+    >
+
+    <div
+      class="bg-base-100 flex gap-6 flex-col @md:flex-row bg-opacity-95 p-6 w-full h-full min-h-96"
+    >
+      <CurrentTrackHeroCover />
+      <CurrentTrackTrackInfo />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { MusicalNoteIcon } from "@heroicons/vue/16/solid";
 import { type ArtistInfo } from "~/scripts/artists";
 import { useNowPlayingStore } from "~/scripts/nowplaying";
+import { PlayIcon } from "@heroicons/vue/16/solid";
 
 const npStore = useNowPlayingStore();
 const currentTrack = computed(() => npStore.lastValidResponse?.now_playing);

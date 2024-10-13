@@ -7,7 +7,7 @@
       min="0.0"
       max="1.0"
       value="0.75"
-      class="range"
+      class="range bg-neutral range-secondary"
       v-model="mediaControls.volume"
     />
   </div>
