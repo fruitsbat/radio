@@ -8,6 +8,7 @@
         {{ np?.song.title }}
       </NuxtLink>
       <NuxtLink
+        :external="true"
         class="font-bold text-3xl link text-center break-words gap-4"
         :to="getArtistLinkFromName(np?.song.artist ?? '')"
       >

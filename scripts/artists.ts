@@ -6,6 +6,10 @@ export interface ArtistInfo extends ParsedContent {
   genres: Array<string>;
 }
 
+export function getArtistIdFromName(name: string): string {
+  return `artistid-${name.replaceAll(" ", "-")}`;
+}
+
 export function getArtistLinkFromName(name: string): string {
-  return `/#artist-${name.replaceAll(" ", "-")}`;
+  return `/#${getArtistIdFromName(name)}`;
 }
