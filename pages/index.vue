@@ -7,7 +7,7 @@
         <NowPlaying />
       </ClientOnly>
       <ArtistsList />
-      <Submit />
+      <SubmitYourMusic />
       <TheMission />
     </div>
     <ClientOnly>

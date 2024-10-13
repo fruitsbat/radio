@@ -22,7 +22,7 @@
         a community project and maybe some new ears on your music.
         <br />
         <br />
-        i'm excited to hear from everyone!
+        i'm excited to hear from everyone! :)
       </p>
     </div>
   </template>

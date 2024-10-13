@@ -12,9 +12,9 @@
         as possible to find new music.
         <br />
         <br />
-        i also want this radio station to provide a pleasant listening experience.
+        i also want this radio station to provide a pleasant listening
+        experience.
       </p>
     </div>
   </template>
 </template>
- 
