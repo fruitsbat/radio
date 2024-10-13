@@ -30,10 +30,27 @@ export default {
   daisyui: {
     themes: [
       {
+        light: {
+          primary: "#71af63",
+          secondary: "#c9c2a3",
+          accent: "#9bba89",
+          neutral: "#060408",
+          "base-100": "#f7f1fc",
+          ...themeShape,
+          ".drop-shadow-primary": {
+            filter: "drop-shadow(0 3px 3px #71af63)",
+          },
+          ".drop-shadow-base-100": {
+            filter: "drop-shadow(0 3px 3px #f7f1fc)",
+          },
+          ".drop-shadow-neutral": {
+            filter: "drop-shadow(0 3px 3px #060408)",
+          },
+        },
         dark: {
           primary: "#71af63",
-          secondary: "#8f235c",
-          accent: "#d14361",
+          secondary: "#c9c2a3",
+          accent: "#9bba89",
           neutral: "#e8d7f5",
           "base-100": "#060408",
           ...themeShape,

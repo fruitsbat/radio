@@ -1,13 +1,18 @@
 <template>
-  <div class="w-full flex flex-col gap-2 items-center justify-center">
-    <div>
+  <div class="flex flex-col gap-8 items-center justify-center">
+    <div class="flex flex-col items-center w-full justify-center">
       <NuxtLink
-        class="font-bold text-5xl link"
+        class="font-black text-5xl link text-center flex break-words gap-4"
+        :to="np?.song.custom_fields.buy"
+      >
+        {{ np?.song.title }}
+      </NuxtLink>
+      <NuxtLink
+        class="font-bold text-3xl link text-center break-words gap-4"
         :to="getArtistLinkFromName(np?.song.artist ?? '')"
       >
+        <span class="font-light">by</span>
         {{ np?.song.artist }}
-        -
-        {{ np?.song.title }}
       </NuxtLink>
     </div>
     <div
@@ -23,10 +28,6 @@
         <span> buy, stream or download this track </span>
         <ArrowTopRightOnSquareIcon class="w-4 h-4" />
       </NuxtLink>
-    </div>
-
-    <div>
-      <span>{{}}</span>
     </div>
   </div>
 </template>

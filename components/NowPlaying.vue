@@ -1,9 +1,10 @@
 <template>
   <div
     v-if="lastValidResponse"
-    class="@container p-6 flex w-full items-center justify-center flex-col"
+    class="p-6 flex w-full items-center justify-center flex-col xl:grid grid-cols-3 gap-6"
   >
-    <CurrentTrack />
+    <CurrentTrack class="col-span-2 xl:max-h-[24em] 2xl:max-h-[32em] @4xl:max-h-[48em]" />
+    <TrackHistory class="xl:max-h-[24em] 2xl:max-h-[32em] @4xl:max-h-[48em]"  />
   </div>
   <div v-else class="loading-ring"></div>
 </template>

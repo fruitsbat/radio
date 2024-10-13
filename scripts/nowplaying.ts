@@ -44,7 +44,7 @@ type ApiNowPlayingStation = {
 type ApiNowPlaying = {
   station: ApiNowPlayingStation;
   now_playing: ApiNowPlayingCurrentSong;
-  song_history: ApiNowPlayingSongHistory;
+  song_history: Array<ApiNowPlayingSongHistory>;
   playing_next: ApiNowPlayingStationQueue;
 };
 
