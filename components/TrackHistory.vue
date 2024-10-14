@@ -14,21 +14,21 @@
               ><img class="h-full rounded-xl" :src="song.art"
             /></NuxtLink>
             <div class="flex-col flex">
-              <div class="flex flex-row gap-2">
+              <div class="flex h-full flex-col gap-2 justify-center text-ellipsis">
                 <NuxtLink
                   :external="true"
                   class="link"
                   :to="getArtistLinkFromName(song.artist)"
                   >{{ song.artist }}</NuxtLink
                 >
-                <span>-</span>
                 <NuxtLink class="link" :to="song.custom_fields.buy">{{
                   song.title
                 }}</NuxtLink>
+                <span v-if="index === 1" class="badge badge-primary"
+                  >now playing</span
+                >
               </div>
-              <span v-if="index === 1" class="badge badge-primary"
-                >now playing</span
-              >
+
               <span v-if="index === 0" class="badge badge-secondary"
                 >up next</span
               >
@@ -53,8 +53,11 @@ const songs = computed(() => {
   const nextUpStartTime =
     npStore.lastValidResponse?.playing_next.played_at ?? 0;
   const nextUpSong = npStore.lastValidResponse?.playing_next.song!;
+  const nowPlayingSong = npStore.lastValidResponse?.now_playing.song!;
+  const nowPlayingTime = npStore.lastValidResponse?.now_playing.played_at;
+  songs?.push({ ...nowPlayingSong, startTime: nowPlayingTime! });
   songs?.push({ ...nextUpSong, startTime: nextUpStartTime });
-  songs = songs?.reverse();
+  songs = songs?.sort((a, b) => b.startTime - a.startTime);
   return songs;
 });
 </script>
