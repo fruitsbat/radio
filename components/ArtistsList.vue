@@ -25,16 +25,16 @@
               {{ artist.name }}
             </a>
           </h3>
-          <ul
-            class="grid text-center w-full"
-            style="grid-template-columns: repeat(auto-fit, minmax(40px, 1fr))"
-          >
-            <li v-for="link in artist.links">
-              <NuxtLink class="link flex items-center gap-1 w-full justify-center" :to="link.url" :external="true">
+          <ul class="flex gap-2 flex-wrap text-center w-full">
+            <li class="flex-grow" v-for="link in artist.links">
+              <NuxtLink
+                class="link flex items-center gap-1 w-full justify-center"
+                :to="link.url"
+                :external="true"
+              >
                 <span>{{ link.name }}</span>
                 <ArrowTopRightOnSquareIcon class="w-4 h-4" />
-                </NuxtLink
-              >
+              </NuxtLink>
             </li>
           </ul>
         </div>
