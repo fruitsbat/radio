@@ -11,19 +11,26 @@
             <NuxtLink
               class="drop-shadow-base-100 rounded-3xl w-24 h-24 basis-auto"
               :to="song.custom_fields.buy"
-              ><img class="aspect-square rounded-xl h-24 w-24 min-w-24" :src="song.art" style="aspect-ratio: 1/1!important;"
+              ><img
+                class="aspect-square rounded-xl h-24 w-24 min-w-24"
+                :src="song.art"
+                style="aspect-ratio: 1/1 !important"
             /></NuxtLink>
-            <div class="flex-col items-start break-words basis-full flex col-span-4">
-              <div class="flex h-full flex-col gap-2 justify-center text-ellipsis">
+            <div
+              class="flex-col items-start break-words basis-full flex col-span-4"
+            >
+              <div
+                class="flex h-full flex-col gap-2 justify-center text-ellipsis"
+              >
+                <NuxtLink class="link" :to="song.custom_fields.buy">{{
+                  song.title
+                }}</NuxtLink>
                 <NuxtLink
                   :external="true"
                   class="link"
                   :to="getArtistLinkFromName(song.artist)"
                   >{{ song.artist }}</NuxtLink
                 >
-                <NuxtLink class="link" :to="song.custom_fields.buy">{{
-                  song.title
-                }}</NuxtLink>
                 <span v-if="index === 1" class="badge badge-primary"
                   >now playing</span
                 >
