@@ -9,6 +9,7 @@
       <ArtistsList />
       <SubmitYourMusic />
       <TheMission />
+      <small class="w-full text-center"> kittycats rule teh world forevah © 2024 </small>
     </div>
     <ClientOnly>
       <PlaybackControls />
