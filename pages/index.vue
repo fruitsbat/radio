@@ -9,7 +9,16 @@
       <ArtistsList />
       <SubmitYourMusic />
       <TheMission />
-      <small class="w-full text-center"> kittycats rule teh world forevah © 2024 </small>
+      <div class="flex flex-col items-center">
+        <small class="w-full text-center">
+          kittycats rule teh world forevah © 2024
+        </small>
+        <img
+          class="w-[176px] h-[62px]"
+          src="/button.png"
+          style="image-rendering: pixelated"
+        />
+      </div>
     </div>
     <ClientOnly>
       <PlaybackControls />
